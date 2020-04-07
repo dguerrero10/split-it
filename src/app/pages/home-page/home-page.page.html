@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Recent Activity</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+    <ion-list>
+      <ion-item *ngFor="let i of dummyNotifications;">
+        <ion-avatar slot="start">
+          <img [src]="i.avatarUrl">
+        </ion-avatar>
+        <ion-label>
+         <p>from {{i.name}}</p>
+         <h2><span>+</span> ${{i.amount}}</h2>
+         <h3>{{i.note}}</h3>
+         <p id="timeSent">{{i.timeSent | date:'short'}}</p>
+        <span><ion-icon name="heart-outline"></ion-icon>
+        <span><ion-icon style="padding-left: 10px;" name="chatbox-outline"></ion-icon></span>
+        </span> 
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+</ion-content>

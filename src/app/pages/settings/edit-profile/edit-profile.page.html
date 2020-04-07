@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="Cancel" defaultHref="settings"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        Save
+      </ion-button>
+    </ion-buttons>
+  
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="img-wrapper">
+    <ion-avatar (click)="presentActionSheet()">
+      <img src="../../../../assets/avatars/dave.jpg" alt="">
+    </ion-avatar>
+  </div>
+
+  <ion-item>
+    <ion-label position="stacked">First Name</ion-label>
+    <ion-input value="{{firstName}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Last Name</ion-label>
+    <ion-input value="{{lastName}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Username</ion-label>
+    <ion-input value="{{username}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input value="{{email}}"></ion-input>
+  </ion-item>
+</ion-content>

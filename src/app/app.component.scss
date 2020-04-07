@@ -2,6 +2,12 @@ ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
 
+ion-avatar {
+  height: 55px;
+  width: 55px;
+  margin-left: 16px;
+}
+
 ion-menu.md ion-content {
   --padding-start: 8px;
   --padding-end: 8px;

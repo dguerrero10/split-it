@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="loans"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button (click)="presentActionSheet()">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title *ngFor="let i of person;">{{i.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let i of person;">
+    <div class="img-wrapper">
+      <ion-avatar>
+        <img [src]="i.avatarUrl" alt="">
+      </ion-avatar>
+    </div>
+
+    <div id="user-info">
+      <ion-label>
+
+        <h2>{{i.name}}</h2>
+        <p>{{i.username}}</p>
+      </ion-label>
+
+    </div>
+  </div>
+  
+</ion-content>

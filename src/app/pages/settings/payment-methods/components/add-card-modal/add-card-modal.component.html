@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button (click)="onCancel()" fill="clear" slot="start">
+      Cancel
+    </ion-button>
+    <ion-title>Add Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div id="wrapper">
+
+<ion-item style="margin-top: 5px">
+  <ion-label position="floating" type="number">Card Number</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating" type="number">Expiration Date</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating" type="number">Security Code</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating" type="number">Zip Code</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-button expand="block" id="add-btn">Add</ion-button>
+
+</div>
+
+</ion-content>
