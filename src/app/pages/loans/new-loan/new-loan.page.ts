@@ -1,35 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-loans',
-  templateUrl: './loans.page.html',
-  styleUrls: ['./loans.page.scss'],
+  selector: 'app-new-loan',
+  templateUrl: './new-loan.page.html',
+  styleUrls: ['./new-loan.page.scss'],
 })
-export class LoansPage implements OnInit {
-  people = true;
-
+export class NewLoanPage implements OnInit {
   public dummyPeople = [
     {
       name: 'Zach Walsh',
       username: '@aaargggghhhh',
       avatarUrl: '../../../assets/avatars/zach.jpg',
-      totalBalanceOwed: 400
     },
     {
       name: 'Rob Hannah',
       username: '@robbie33',
       avatarUrl: '../../../assets/avatars/rob.jpg',
-      totalBalanceOwed: 700
     }
   ];
-
   constructor() { }
 
   ngOnInit() {
   }
-
-  segmentChanged(ev: any) {
-    console.log(ev)
-  }
-
 }

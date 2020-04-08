@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SearchPeoplePageRoutingModule } from './search-people-routing.module';
+import { CurrentLoansPageRoutingModule } from './current-loans-routing.module';
 
-import { SearchPeoplePage } from './search-people.page';
+import { CurrentLoansPage } from './current-loans.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SearchPeoplePageRoutingModule
+    CurrentLoansPageRoutingModule
   ],
-  declarations: [SearchPeoplePage],
-  entryComponents: []
+  declarations: [CurrentLoansPage]
 })
-export class SearchPeoplePageModule {}
+export class CurrentLoansPageModule {}

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Cancel" defaultHref="home-page"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Recipient</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header>
+    <ion-toolbar style="padding: 5px;">
+      <ion-searchbar style="padding: 15px"></ion-searchbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item *ngFor="let i of dummyPeople;" routerLink="new-loan-details">
+    <ion-avatar slot="end">
+      <img [src]="i.avatarUrl">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{i.name}}</h2>
+      <p>{{i.username}}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>

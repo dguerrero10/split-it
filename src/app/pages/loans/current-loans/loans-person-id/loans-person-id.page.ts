@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
+import { ActionSheetController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-loans-person-id',
@@ -15,7 +15,8 @@ export class LoansPersonIdPage implements OnInit {
     }
   ];
 
-  constructor(public actionSheetController: ActionSheetController) { }
+  constructor(public alertController: AlertController,
+              public actionSheetController: ActionSheetController) { }
 
   ngOnInit() {
   }
@@ -28,7 +29,7 @@ export class LoansPersonIdPage implements OnInit {
       },{
         text: 'Forgive Debt',
         handler: () => {
-          console.log('Debt Forgiven');
+         this.presentAlertConfirm();
         }
         },{
           text: 'Cancel',
@@ -41,4 +42,26 @@ export class LoansPersonIdPage implements OnInit {
     await actionSheet.present();
   }
 
+  async presentAlertConfirm() {
+    const alert = await this.alertController.create({
+      header: 'Are you sure?',
+      message: "Pressing Accept will delete all information pertaining to this debt.",
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Accept',
+          cssClass: 'danger',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
 }

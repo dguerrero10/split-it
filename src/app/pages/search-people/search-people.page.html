@@ -19,6 +19,12 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-item-divider>
+    <ion-label class="section-divider">
+     Friends
+    </ion-label>
+  </ion-item-divider>
+  
   <ion-item *ngFor="let i of dummyPeople;">
     <ion-avatar slot="end">
       <img [src]="i.avatarUrl">
@@ -28,5 +34,4 @@
       <p>{{i.username}}</p>
     </ion-label>
   </ion-item>
-
 </ion-content>

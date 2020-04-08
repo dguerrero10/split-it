@@ -44,5 +44,4 @@ export class SearchPeoplePage implements OnInit {
     });
     await actionSheet.present();
   }
-
 }

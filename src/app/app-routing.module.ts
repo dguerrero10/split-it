@@ -12,8 +12,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home-page/home-page.module').then( m => m.HomePagePageModule)
   },
   {
-    path: 'loans',
-    loadChildren: () => import('./pages/loans/loans.module').then( m => m.LoansPageModule)
+    path: 'current-loans',
+    loadChildren: () => import('./pages/loans/current-loans/current-loans.module').then( m => m.CurrentLoansPageModule)
   },
   {
     path: 'settings',
@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'search-people',
     loadChildren: () => import('./pages/search-people/search-people.module').then( m => m.SearchPeoplePageModule)
+  },  {
+    path: 'new-loan',
+    loadChildren: () => import('./pages/loans/new-loan/new-loan.module').then( m => m.NewLoanPageModule)
   }
+
 ];
 
 @NgModule({
