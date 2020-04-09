@@ -14,24 +14,12 @@
         <ion-segment-button value="People">
           <ion-label>People</ion-label>
         </ion-segment-button>
-        <ion-segment-button value="bookmark">
-          <ion-label>Category</ion-label>
+        <ion-segment-button value="Loan">
+          <ion-label>Loan</ion-label>
         </ion-segment-button>
       </ion-segment>
     </ion-toolbar>
   </ion-header>
-
-  <div *ngIf="people">
-    <ion-item *ngFor="let i of dummyPeople;" routerLink="loans-person-id">
-      <ion-avatar slot="end">
-        <img [src]="i.avatarUrl">
-      </ion-avatar>
-      <ion-label>
-        <h2>{{i.name}}</h2>
-        <p>{{i.username}}</p>
-        <p id="total-balance">Total balance owed You <span id="total-balance-span">${{i.totalBalanceOwed}}</span></p>
-      </ion-label>
-    </ion-item>
-  </div>
-
+  <app-loan-category></app-loan-category>
+  <app-people-category></app-people-category>
 </ion-content>

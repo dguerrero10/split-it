@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="/new-loan/new-loan-type"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Long Term Loan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let i of person;">
+    <div class="img-wrapper">
+      <ion-avatar>
+        <img [src]="i.avatarUrl" alt="">
+      </ion-avatar>
+    </div>
+
+    <div id="user-info">
+      <ion-label>
+        <h2>{{i.name}}</h2>
+        <p>{{i.username}}</p>
+      </ion-label>
+    </div>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Loan name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" type="number">Loan amount</ion-label>
+      <ion-input placeholder="$0"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Set installment details</ion-label>
+      <ion-toggle [(ngModel)]="installment" (ionChange)="addInstallment()"></ion-toggle>
+    </ion-item>
+
+    <div *ngIf="installment">
+      <ion-item>
+        <ion-label position="floating" type="number">Installment amount</ion-label>
+        <ion-input placeholder="$0"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>How often</ion-label>
+        <ion-select multiple="false" okText="Okay">
+          <ion-select-option value="everyDay">every day</ion-select-option>
+          <ion-select-option value="everyWeek">every week</ion-select-option>
+          <ion-select-option value="everyTwoWeeks">every 2 weeks</ion-select-option>
+          <ion-select-option value="everyMonth">every month</ion-select-option>
+          <ion-select-option value="everyYear">every year</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+    <ion-item>
+      <ion-label>Set interest</ion-label>
+      <ion-toggle [(ngModel)]="interest" (ionChange)="addInterest()"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="interest">
+      <ion-label position="floating" type="number">Interest amount</ion-label>
+      <ion-input placeholder="1%"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Loan start date</ion-label>
+      <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-button id="accept-btn" expand="block" fill="solid">Accept</ion-button>
+
+</ion-content>

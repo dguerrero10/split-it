@@ -3,11 +3,6 @@
     <ion-buttons slot="start">
       <ion-back-button text="" defaultHref="new-loan"></ion-back-button>
     </ion-buttons>
-    <ion-buttons slot="primary">
-      <ion-button (click)="presentActionSheet()">
-        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
-      </ion-button>
-    </ion-buttons>
     <ion-title *ngFor="let i of person;">{{i.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -22,12 +17,30 @@
 
     <div id="user-info">
       <ion-label>
-
         <h2>{{i.name}}</h2>
         <p>{{i.username}}</p>
       </ion-label>
-
     </div>
   </div>
-  
+
+  <ion-item-divider>
+    <ion-label class="section-divider">Choose Your Type of Loan</ion-label>
+  </ion-item-divider>
+
+  <ion-list>
+    <ion-item routerLink="loan-type-long" detail>
+      <ion-label>
+        <h2>Long Term Loan</h2>
+        <p>Better for larger loans payed in installments</p>
+      </ion-label>
+    </ion-item>
+    <p></p>
+    <ion-item routerLink="loan-type-short" detail>
+      <ion-label>
+        <h2>Short Term Loan</h2>
+        <p>Better for smaller loans payed in one payment</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

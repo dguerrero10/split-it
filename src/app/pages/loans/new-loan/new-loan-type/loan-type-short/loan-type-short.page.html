@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="/new-loan/new-loan-type"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Short Term Loan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let i of person;">
+    <div class="img-wrapper">
+      <ion-avatar>
+        <img [src]="i.avatarUrl" alt="">
+      </ion-avatar>
+    </div>
+
+    <div id="user-info">
+      <ion-label>
+        <h2>{{i.name}}</h2>
+        <p>{{i.username}}</p>
+      </ion-label>
+    </div>
+  </div>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Loan name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" type="number">Loan amount</ion-label>
+      <ion-input placeholder="$0"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Loan start date</ion-label>
+      <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-button id="accept-btn" expand="block" fill="solid">Accept</ion-button>
+
+</ion-content>

@@ -10,46 +10,26 @@ export class HomePagePage implements OnInit {
   public dummyNotifications = [
     {
       name: 'Zach Walsh',
-      avatarUrl: '../../../assets/avatars/rob.jpg',
+      avatarUrl: '../../../assets/avatars/zach.jpg',
       amount: 10,
-      note: 'Loan Payment',
+      loanCat: 'Moving Loan',
       timeSent: this.time
     },
     {
-      name: 'Rob Hannah',
-      avatarUrl: '../../../assets/avatars/zach.jpg',
+      name: 'Rob Hanna',
+      avatarUrl: '../../../assets/avatars/rob.jpg',
       amount: 400,
-      note: 'Monthly Rent',
+      loanCat: 'Rent Loan',
       timeSent: this.time
     },
     {
-      name: 'Rob Hannah',
-      avatarUrl: '../../../assets/avatars/zach.jpg',
-      amount: 400,
-      note: 'Monthly Rent',
+      name: 'You',
+      recipient: 'Rob Hanna',
+      avatarUrl: '../../../assets/avatars/dave.jpg',
+      amount: 200,
+      loanCat: 'Drugs and Alcohol Addiction',
       timeSent: this.time
-    },
-    {
-      name: 'Rob Hannah',
-      avatarUrl: '../../../assets/avatars/zach.jpg',
-      amount: 400,
-      note: 'Monthly Rent',
-      timeSent: this.time
-    },
-    {
-      name: 'Rob Hannah',
-      avatarUrl: '../../../assets/avatars/zach.jpg',
-      amount: 400,
-      note: 'Monthly Rent',
-      timeSent: this.time
-    },
-    {
-      name: 'Rob Hannah',
-      avatarUrl: '../../../assets/avatars/zach.jpg',
-      amount: 400,
-      note: 'Monthly Rent',
-      timeSent: this.time
-    },
+    }
   ];
 
   constructor() { }

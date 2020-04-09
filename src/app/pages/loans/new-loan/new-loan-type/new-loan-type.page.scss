@@ -1,0 +1,28 @@
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+img, ion-avatar {
+    width: 125px;
+    height: 125px;
+}
+
+#user-info {
+    text-align: center;
+}
+
+ion-label {
+    margin-left: 0;
+    padding: 5px;
+}
+
+ion-item-divider {
+    padding-left: 0;
+}
+
+.section-divider {
+    padding: 10px 0;
+    margin-left: 12px;
+}

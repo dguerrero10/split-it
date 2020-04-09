@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-new-loan-details',
-  templateUrl: './new-loan-details.page.html',
-  styleUrls: ['./new-loan-details.page.scss'],
+  selector: 'app-loan-type-short',
+  templateUrl: './loan-type-short.page.html',
+  styleUrls: ['./loan-type-short.page.scss'],
 })
-export class NewLoanDetailsPage implements OnInit {
+export class LoanTypeShortPage implements OnInit {
   public person = [
     {
       name: "Zach Walsh",
@@ -13,7 +13,7 @@ export class NewLoanDetailsPage implements OnInit {
       username: '@aaargggghhhh',
     }
   ];
-
+  
   constructor() { }
 
   ngOnInit() {

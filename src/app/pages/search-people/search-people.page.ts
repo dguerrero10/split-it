@@ -14,7 +14,7 @@ export class SearchPeoplePage implements OnInit {
       avatarUrl: '../../../assets/avatars/zach.jpg',
     },
     {
-      name: 'Rob Hannah',
+      name: 'Rob Hanna',
       username: '@robbie33',
       avatarUrl: '../../../assets/avatars/rob.jpg',
     }

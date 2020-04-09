@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { NewLoanDetailsPageRoutingModule } from './new-loan-details-routing.module';
+import { LoanTypeShortPageRoutingModule } from './loan-type-short-routing.module';
 
-import { NewLoanDetailsPage } from './new-loan-details.page';
+import { LoanTypeShortPage } from './loan-type-short.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NewLoanDetailsPageRoutingModule
+    LoanTypeShortPageRoutingModule
   ],
-  declarations: [NewLoanDetailsPage]
+  declarations: [LoanTypeShortPage]
 })
-export class NewLoanDetailsPageModule {}
+export class LoanTypeShortPageModule {}

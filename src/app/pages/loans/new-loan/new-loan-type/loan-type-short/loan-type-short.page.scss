@@ -1,0 +1,18 @@
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+img, ion-avatar {
+    width: 65px;
+    height: 65px;
+}
+
+#user-info {
+    text-align: center;
+}
+
+#accept-btn {
+    margin: 25px 16px;
+}

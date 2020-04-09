@@ -9,8 +9,8 @@ const routes: Routes = [
     component: NewLoanPage
   },
   {
-    path: 'new-loan-details',
-    loadChildren: () => import('./new-loan-details/new-loan-details.module').then( m => m.NewLoanDetailsPageModule)
+    path: 'new-loan-type',
+    loadChildren: () => import('./new-loan-type/new-loan-type.module').then( m => m.NewLoanTypePageModule)
   }
 ];
 
