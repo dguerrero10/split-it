@@ -1,0 +1,34 @@
+<ion-item-divider class="section-divider">
+  <ion-label>Loans owed you</ion-label>
+</ion-item-divider>
+<ion-list>
+  <ion-item *ngFor="let i of dummyYou;" routerLink="loans-person-id" lines="none">
+    <ion-avatar slot="start">
+      <img [src]="i.avatarUrl">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{i.loanName}}</h2>
+      <h3>loan to <span class="loan-span">{{i.toPerson}}</span></h3>
+      <p id="total-balance">Total loan amount: <span id="total-balance-span">${{i.totalLoanAmount}}</span></p>
+      <p id="total-balance">Current loan balance: <span id="current-loan-balance">${{i.currentLoanBalance}}</span></p>
+      <p>Next payment: <span class="loan-span">{{i.nextPayment | date: 'mediumDate'}}</span></p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+<ion-item-divider class="section-divider">
+  <ion-label>Loans you owe</ion-label>
+</ion-item-divider>
+<ion-list>
+  <ion-item *ngFor="let i of dummyLoans;" routerLink="loans-person-id">
+    <ion-avatar slot="start">
+      <img [src]="i.avatarUrl">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{i.loanName}}</h2>
+      <h3>loan from <span class="loan-span">{{i.personName}}</span></h3>
+      <p id="total-balance">Total loan amount: <span id="total-balance-span">${{i.totalLoanAmount}}</span></p>
+      <p id="total-balance">Current loan balance: <span id="current-loan-balance">${{i.currentLoanBalance}}</span></p>
+      <p>Next payment: <span class="loan-span">{{i.nextPayment | date: 'mediumDate'}}</span></p>
+    </ion-label>
+  </ion-item>
+</ion-list>

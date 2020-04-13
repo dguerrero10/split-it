@@ -1,0 +1,32 @@
+<ion-item-divider class="section-divider">
+  <ion-label>Loans owed you</ion-label>
+</ion-item-divider>
+<ion-list>
+  <ion-item *ngFor="let i of dummyYou;" routerLink="loans-person-id" lines="none">
+    <ion-avatar slot="start">
+      <img [src]="i.avatarUrl">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{i.personName}}</h2>
+      <p id="outstanding-loans">Active loans: <span id="loan-count">{{i.loanCount}}</span></p>
+      <p id="total-balance">Total amount owed You: <span id="total-balance-you-span">${{i.totalLoanBalance}}</span></p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+<ion-item-divider class="section-divider">
+  <ion-label>Loans you owe</ion-label>
+</ion-item-divider>
+<div *ngIf="people">
+  <ion-list>
+    <ion-item *ngFor="let i of dummyPeople;" routerLink="loans-person-id">
+      <ion-avatar slot="start">
+        <img [src]="i.avatarUrl">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{i.personName}}</h2>
+        <p id="outstanding-loans">Active loans: <span id="loan-count">{{i.loanCount}}</span></p>
+        <p id="total-balance">Total amount You owe: <span id="total-balance-span">${{i.totalLoanBalance}}</span></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>

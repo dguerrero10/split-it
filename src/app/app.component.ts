@@ -18,14 +18,19 @@ export class AppComponent implements OnInit {
       icon: 'home'
     },
     {
-      title: 'Current Loans',
-      url: 'current-loans',
+      title: 'Active Loans',
+      url: 'active-loans',
       icon: 'cash'
     },
     {
-      title: 'New Loan',
+      title: 'Create Loan',
       url: 'new-loan',
       icon: 'create'
+    },
+    {
+      title: 'Requested Loans',
+      url: 'requested-loans',
+      icon: 'receipt'
     },
     {
       title: 'Search People',

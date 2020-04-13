@@ -12,14 +12,14 @@ export class HomePagePage implements OnInit {
       name: 'Zach Walsh',
       avatarUrl: '../../../assets/avatars/zach.jpg',
       amount: 10,
-      loanCat: 'Moving Loan',
+      loanName: 'Moving Loan',
       timeSent: this.time
     },
     {
       name: 'Rob Hanna',
       avatarUrl: '../../../assets/avatars/rob.jpg',
       amount: 400,
-      loanCat: 'Rent Loan',
+      loanName: 'Rent Loan',
       timeSent: this.time
     },
     {
@@ -27,10 +27,19 @@ export class HomePagePage implements OnInit {
       recipient: 'Rob Hanna',
       avatarUrl: '../../../assets/avatars/dave.jpg',
       amount: 200,
-      loanCat: 'Drugs and Alcohol Addiction',
+      loanName: 'Drugs and Alcohol Addiction',
       timeSent: this.time
     }
   ];
+
+  doRefresh(event) {
+    console.log('Begin async operation');
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 1000);
+  }
 
   constructor() { }
 

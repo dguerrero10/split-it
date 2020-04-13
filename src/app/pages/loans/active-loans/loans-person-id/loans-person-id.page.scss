@@ -1,0 +1,43 @@
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+img, ion-avatar {
+    width: 125px;
+    height: 125px;
+}
+
+#user-info {
+    text-align: center;
+}
+
+.friends-container {
+    width: 100%;
+    margin-top: 8px;
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+}
+
+#segment-filter {
+    border-bottom: 1px solid whitesmoke;
+}
+
+#segment-filter, #friends {
+    display: flex;
+    justify-content: center;
+}
+
+ion-segment {
+    width: 100%;
+    margin: 8px;
+}
+
+#friends {
+    margin-top: 10px;
+}
+
+#pay-request-btn {
+    margin: 10px 20px;
+}

@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CurrentLoansPageRoutingModule } from './current-loans-routing.module';
+import { ActiveLoansPageRoutingModule } from './active-loans-routing.module';
 
-import { CurrentLoansPage } from './current-loans.page';
+import { ActiveLoansPage } from './active-loans.page';
 import { PeopleCategoryComponent } from './people-category/people-category.component';
 import { LoanCategoryComponent } from './loan-category/loan-category.component';
 
@@ -15,8 +15,8 @@ import { LoanCategoryComponent } from './loan-category/loan-category.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    CurrentLoansPageRoutingModule
+    ActiveLoansPageRoutingModule
   ],
-  declarations: [CurrentLoansPage, PeopleCategoryComponent, LoanCategoryComponent]
+  declarations: [ActiveLoansPage, PeopleCategoryComponent, LoanCategoryComponent]
 })
-export class CurrentLoansPageModule {}
+export class ActiveLoansPageModule {}

@@ -1,0 +1,30 @@
+
+#loan-count {
+    color: var(--ion-color-secondary);
+}
+
+#total-balance-span {
+    color: #eb445a;
+}
+
+#total-balance-you-span {
+    color: var(--ion-color-success-shade);
+}
+
+.section-divider {
+    padding-left: 8px !important;
+    background: whitesmoke;
+}
+
+p {
+    color: var(--ion-color-dark-tint);
+}
+
+ion-label > p, h2 {
+    padding: 3px 0;
+}
+
+ion-avatar {
+    height: 55px;
+    width: 55px;
+}

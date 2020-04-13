@@ -1,0 +1,31 @@
+
+#total-balance-span {
+    color: var(--ion-color-secondary);
+}
+
+#total-balance-span {
+    color: #eb445a;
+}
+
+p {
+    color: var(--ion-color-dark-tint);
+}
+
+ion-label > p, h2 {
+    padding: 3px 0;
+}
+
+.loan-span {
+    color: var( --ion-color-light-contrast);
+}
+
+.section-divider {
+    padding-left: 8px !important;
+    background: whitesmoke;
+    font-weight: lighter;
+}
+
+ion-avatar {
+    height: 55px;
+    width: 55px;
+}

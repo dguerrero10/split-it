@@ -7,6 +7,8 @@ import { ActionSheetController, AlertController } from '@ionic/angular';
   styleUrls: ['./loans-person-id.page.scss'],
 })
 export class LoansPersonIdPage implements OnInit {
+  segment: any;
+
   public person = [
     {
       name: "Zach Walsh",
@@ -16,18 +18,29 @@ export class LoansPersonIdPage implements OnInit {
   ];
 
   constructor(public alertController: AlertController,
-              public actionSheetController: ActionSheetController) { }
+              public actionSheetController: ActionSheetController) { 
+                this.segment = "Payments"
+              }
 
   ngOnInit() {
   }
 
-  async presentActionSheet() {
+  doRefresh(event) {
+    console.log('Begin async operation');
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 2000);
+  }
+
+  async presentActionSheetUserOptions() {
     const actionSheet = await this.actionSheetController.create({
       buttons: [{
         text: 'Block',
         role: 'destructive',
       },{
-        text: 'Forgive Debt',
+        text: 'Forgive All Debt',
         handler: () => {
          this.presentAlertConfirm();
         }
@@ -36,6 +49,33 @@ export class LoansPersonIdPage implements OnInit {
           role: 'cancel',
           handler: () => {
             console.log('Cancel clicked');
+        }
+      }]
+    });
+    await actionSheet.present();
+  }
+  
+  async presentActionSheetPayCreateOptions() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Pay or Create Loan',
+      buttons: [{
+        text: 'Pay',
+        icon: 'cash-outline',
+        handler: () => {
+          console.log('Delete clicked');
+        }
+      }, {
+        text: 'Create',
+        icon: 'create-outline',
+        handler: () => {
+          console.log('Share clicked');
+        }
+      },
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
         }
       }]
     });

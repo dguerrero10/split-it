@@ -3,6 +3,11 @@
     <ion-buttons slot="start">
       <ion-back-button text="" defaultHref="/new-loan/new-loan-type"></ion-back-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home-page">
+        Cancel
+      </ion-button>
+    </ion-buttons>
     <ion-title>Short Term Loan</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -31,6 +36,15 @@
     <ion-item>
       <ion-label position="floating" type="number">Loan amount</ion-label>
       <ion-input placeholder="$0"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Is this money owed you?</ion-label>
+      <ion-checkbox slot="end"></ion-checkbox>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>
+        <p><a href="">What does this mean?</a></p>
+      </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>Loan start date</ion-label>

@@ -3,23 +3,25 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Current Loans</ion-title>
+    <ion-title>Active Loans</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-header id="segment-header">
     <ion-toolbar>
-      <ion-segment (ionChange)="segmentChanged($event)">
-        <ion-segment-button value="People">
-          <ion-label>People</ion-label>
-        </ion-segment-button>
+      <ion-segment [(ngModel)]="segment">
         <ion-segment-button value="Loan">
           <ion-label>Loan</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="People">
+          <ion-label>People</ion-label>
         </ion-segment-button>
       </ion-segment>
     </ion-toolbar>
   </ion-header>
-  <app-loan-category></app-loan-category>
-  <app-people-category></app-people-category>
+  <div [ngSwitch]="segment">
+    <app-loan-category *ngSwitchCase="'Loan'"></app-loan-category>
+    <app-people-category *ngSwitchCase="'People'"></app-people-category>
+  </div>
 </ion-content>

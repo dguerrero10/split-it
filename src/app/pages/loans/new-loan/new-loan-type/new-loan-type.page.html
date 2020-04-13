@@ -3,6 +3,11 @@
     <ion-buttons slot="start">
       <ion-back-button text="" defaultHref="new-loan"></ion-back-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home-page">
+        Cancel
+      </ion-button>
+    </ion-buttons>
     <ion-title *ngFor="let i of person;">{{i.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -38,7 +43,7 @@
     <ion-item routerLink="loan-type-short" detail>
       <ion-label>
         <h2>Short Term Loan</h2>
-        <p>Better for smaller loans payed in one payment</p>
+        <p>Basically, a reminder</p>
       </ion-label>
     </ion-item>
   </ion-list>

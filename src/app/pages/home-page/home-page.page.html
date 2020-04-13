@@ -13,7 +13,10 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
   <ion-header>
     <ion-toolbar>
       <ion-title>Recent Activity</ion-title>
@@ -27,9 +30,9 @@
           <img [src]="i.avatarUrl">
         </ion-avatar>
         <ion-label>
-          <p>You sent {{i.recipient}} for </p>
-          <h2 id="sent"><span>-</span> ${{i.amount}}</h2>
-          <h3>{{i.loanCat}}</h3>
+          <p>You sent {{i.recipient}}</p>
+          <h2 id="sent"><span>-</span>${{i.amount}}</h2>
+          <h3>for {{i.loanName}}</h3>
           <p id="timeSent">{{i.timeSent | date:'short'}}</p>
           <span>
             <ion-icon name="heart-outline"></ion-icon>
@@ -46,7 +49,7 @@
         <ion-label>
           <p>{{i.name}} sent You</p>
           <h2 id="recieved"><span>+</span> ${{i.amount}}</h2>
-          <h3>{{i.loanCat}}</h3>
+          <h3>for {{i.loanName}}</h3>
           <p id="timeSent">{{i.timeSent | date:'short'}}</p>
           <span>
             <ion-icon name="heart-outline"></ion-icon>
@@ -57,7 +60,6 @@
         </ion-label>
       </ion-item>
     </div>
-
   </ion-list>
 
 </ion-content>

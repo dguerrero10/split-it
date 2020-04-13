@@ -14,7 +14,7 @@ export class PeopleCategoryComponent implements OnInit {
       username: '@dguerrero55',
       avatarUrl: '../../../assets/avatars/dave.jpg',
       loanCount: 2,
-      totalBalanceOwed: 1000
+      totalLoanBalance: 1000
     }
   ];
 
@@ -24,14 +24,14 @@ export class PeopleCategoryComponent implements OnInit {
       username: '@aaargggghhhh',
       avatarUrl: '../../../assets/avatars/zach.jpg',
       loanCount: 2,
-      totalBalanceOwed: 400
+      totalLoanBalance: 400
     },
     {
       personName: 'Rob Hanna',
       username: '@robbie33',
       avatarUrl: '../../../assets/avatars/rob.jpg',
       loanCount: 1,
-      totalBalanceOwed: 700
+      totalLoanBalance: 700
     }
   ];
 
